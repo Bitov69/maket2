@@ -1,0 +1,543 @@
+body {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 80px;
+  height: 80px;
+}
+
+.header_menu-container {
+  width: 100%;
+}
+
+.header_menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  position: relative;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.header_menu img {
+  position: absolute;
+  top: 5px;
+}
+
+.header_menu li {
+  margin: 15px;
+}
+
+.header_menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.header_menu a:hover {
+  text-decoration: underline;
+}
+
+.main_banner {
+  padding-top: 100px;
+  display: flex;
+}
+
+.main_banner-image {
+  position: relative;
+  width: 95%;
+}
+
+.main_banner-image::after {
+  content: "ПОД ПАРУСОМ";
+
+  font-size: 40px;
+  font-style: italic;
+  color: #3d536f;
+
+  position: absolute;
+  left: 50px;
+  top: -50px;
+}
+
+.main_banner-image::before {
+  content: "ВМЕСТЕ";
+
+  font-size: 40px;
+  font-style: italic;
+  color: white;
+
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+.main_banner-button {
+  position: absolute;
+  font-size: 12px;
+  bottom: 30px;
+  color: white;
+  left: 50px;
+}
+
+.main_banner-button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: -5px;
+  left: 120px;
+}
+
+.main_banner-navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background-color: white;
+}
+
+.main_banner-navigation button {
+  border: 0;
+  background-color: white;
+  padding: 25px 40px;
+}
+
+.main_banner-links {
+  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+}
+
+.main_banner-links a {
+  padding: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.main_banner-links a:hover {
+  text-decoration: underline;
+}
+
+.news_container {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.news_block {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.news_text {
+  min-width: 100px;
+  max-width: 400px;
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.news_block:last-child {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.news_block:last-child h2::after {
+  content: '';
+  position: relative;
+  margin-top: 5px;
+  left: 300px;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: aqua;
+}
+
+.news_block:first-child h2::after {
+  content: '';
+  margin-top: 5px;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: aqua;
+}
+
+.event_container {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event_block {
+  display: flex;
+  justify-content: center;
+}
+
+.event_item {
+  margin: 20px;
+  text-align: center;
+  box-shadow: 2px 5px 10px 5px #e6e6e6;
+}
+
+.event_item img {
+  max-height: 270px;
+  min-height: 100px;
+  min-width: 270px;
+  max-width: fit-content;
+}
+
+.event_container h2:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 60px;
+  width: 200px;
+  height: 3px;
+  margin-top: 10px;
+  background-color: aqua;
+}
+
+.gallery_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+}
+
+.gallery_container h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  background-color: aqua;
+  width: 100px;
+  height: 2px;
+  left: 70px;
+  margin-top: 5px;
+}
+
+.gallery_block {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.gallery_item:nth-child(1) {
+  position: absolute;
+  left: 100px;
+}
+
+.gallery_item:nth-child(2) {
+   position: absolute;
+   z-index: 10;
+   top: 7px;
+}
+
+.gallery_item svg{
+  width: 60px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.gallery_item:nth-child(2) img {
+  max-width: 700px;
+  max-height: 350px;
+}
+
+.gallery_item:last-child {
+  position: absolute;
+  right: 100px;
+}
+
+.services_container {
+  margin: 50px 70px 200px 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a b c"
+    "a d e";
+  column-gap: 40px;
+  align-items: center;
+}
+
+.services_block {
+  position: relative;
+}
+
+.services_item_dish {
+  border: 2px solid aqua;
+  border-radius: 50%;
+  padding: 7px;
+
+  width: 40px;
+  height: 40px;
+  background-image: url(svg/dish.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services_item_glass {
+  border: 2px solid aqua;
+  border-radius: 50%;
+  padding: 7px;
+
+  width: 40px;
+  height: 40px;
+  background-image: url(svg/glass.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services_item_double_bed {
+  border: 2px solid aqua;
+  border-radius: 50%;
+  padding: 7px;
+
+  width: 40px;
+  height: 40px;
+  background-image: url(svg/double_bed.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services_item_hands {
+  border: 2px solid aqua;
+  border-radius: 50%;
+  padding: 7px;
+
+  width: 40px;
+  height: 40px;
+  background-image: url(svg/hands.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services_block:nth-child(1) {
+  grid-area:a ;
+}
+
+.services_block:nth-child(2) {
+  grid-area:b ;
+}
+
+.services_block:nth-child(3) {
+  grid-area:c ;
+}
+
+.services_block:nth-child(4) {
+  grid-area:d ;
+}
+
+.services_block:nth-child(5) {
+  grid-area:e ;
+}
+
+.services_block p {
+  font-size: 20px;
+  width: 100%;
+}
+
+.services_block h2:after {
+  display: block;
+  content: "";
+  background-color: aqua;
+  height: 2px;
+  width: 100px;
+  margin-top: 5px;
+}
+
+.blog_container {
+  margin-bottom: 100px;
+}
+
+.blog_block {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a b"
+    "a c";
+  grid-gap: 20px 30px;
+}
+
+.blog_item {
+  box-shadow: 3px 0px 10px 5px #e6e6e6;
+  padding-bottom: 20px;
+  
+}
+
+.blog_item:nth-child(1) h2::before {
+  content: "Победитель регаты шкипер Иван Кулешов";
+  display: block;
+  font-size: 14px;
+  color: grey;
+  position: absolute;
+  top: 0;
+}
+
+.blog_item:nth-child(2) h2::before {
+  content: "Участник выставки - яхта Gosling 3.15";
+  display: block;
+  font-size: 14px;
+  color: grey;
+  position: absolute;
+  top: 0;
+}
+
+.blog_item:nth-child(3) h2::before {
+  content: "Участница регаты 2019 Ирина Петрова";
+  display: block;
+  font-size: 14px;
+  color: grey;
+  position: absolute;
+  top: 0;
+}
+
+.blog_item:nth-child(1) {
+  grid-area: a;
+}
+
+.blog_item:nth-child(2) {
+  grid-area: b;
+}
+
+.blog_item:nth-child(3) {
+  grid-area: c;
+}
+
+.blog_text {
+  padding: 20px 0px 0px 50px;
+  font-size: 18px;
+  position: relative;
+}
+
+.blog_text p {
+  width: 80%;
+}
+
+.blog_man {
+  display: flex;
+  padding-left: 50px;
+  position: relative;
+}
+
+.blog_man h3 {
+  margin: 0;
+}
+.blog_man p {
+  margin: 0;
+}
+
+
+
+/*map*/
+
+.map_container {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 50px;
+
+}
+
+.map_text {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.map_text h2:after {
+  display: block;
+  content: "";
+  background-color: aqua;
+  width:80px;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.map_block {
+  display: flex;
+}
+
+.map_item_facebook {
+  width: 30px;
+  height: 30px;
+
+  margin: 0 10px;
+
+  border: 2px solid aqua;
+  border-radius: 50%;
+
+  background-image: url(svg/facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.map_item_twitter {
+  width: 30px;
+  height: 30px;
+
+  margin: 0 10px;
+
+  border: 2px solid aqua;
+  border-radius: 50%;
+
+  background-image: url(svg/twitter.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.map_item_instagram {
+  width: 30px;
+  height: 30px;
+
+  margin: 0 10px;
+
+  border: 2px solid aqua;
+  border-radius: 50%;
+
+  background-image: url(svg/instagram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  position: absolute;
+  width: 99%;
+  left: 10px;
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
